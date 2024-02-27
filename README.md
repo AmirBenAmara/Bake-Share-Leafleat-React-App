@@ -1,3 +1,15 @@
+
+# requirements
+make sure you have Nodejs version 14.x or higher installed in your machine 
+
+# Getting Started (install and run the application)
+
+1. run in the terminal 'npm install' to install project dependencies and generate the 'node_modules' folder
+2. run 'npm start' to run the application , once the application run it will open in the browser on [localhost:](http://localhost:3000/)
+3. run 'npm run build' to build the project for produuction 
+4. run 'npm test' to run the tests with Jest framework (didn't have the time to implement all the test cases correctly due to high volume of networks mock data)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

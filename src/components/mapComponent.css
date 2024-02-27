@@ -1,0 +1,42 @@
+
+.app-container h1 {
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between; /* Adjust alignment */
+    align-items: center; /* Align items vertically in the center */
+    width: 100%; 
+}
+
+.navigation .back-button {
+    background-color: #007bff; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    cursor: pointer; /* Cursor changes to pointer when hovered */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.navigation .back-button:hover {
+    background-color: #0056b3; /* Darker blue background on hover */
+}
+
+.info-section {
+    display: flex;
+    align-items: center; /* Align items vertically in the center */
+    justify-content: center; 
+    gap: 20px; /* Space between items */
+}
+
+.info-item {
+    display: flex;
+    align-items: center; /* Align image and text vertically */
+    gap: 10px; /* Space between image and text */
+}
+
+.info-item img {
+    width: 30px; 
+    height: auto; 
+}

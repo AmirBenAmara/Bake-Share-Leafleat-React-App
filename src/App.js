@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from 'react';
+import { fetchData } from './services/apiService';
+import MapComponent from './components/mapComponent';
 
-function App() {
+
+const App = () => {
+
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    const fetchDataAsync = async () => {
+      const result = await fetchData(); // Fetch data using your API service
+      console.log(result)
+      setData(result);
+    };
+
+    fetchDataAsync();
+  }, []);
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {data ? <MapComponent data={data} /> : <p>Loading...</p>}
     </div>
   );
-}
+};
 
 export default App;
